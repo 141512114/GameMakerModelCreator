@@ -1,5 +1,15 @@
 {
   "resources": [
+    {"id":{"name":"o_softwareManager","path":"objects/o_softwareManager/o_softwareManager.yy",},"order":1,},
+    {"id":{"name":"load_obj","path":"scripts/load_obj/load_obj.yy",},"order":1,},
+    {"id":{"name":"shd_lighting","path":"shaders/shd_lighting/shd_lighting.yy",},"order":0,},
+    {"id":{"name":"vertex_create_cube","path":"scripts/vertex_create_cube/vertex_create_cube.yy",},"order":3,},
+    {"id":{"name":"load_d3d","path":"scripts/load_d3d/load_d3d.yy",},"order":2,},
+    {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":0,},
+    {"id":{"name":"vertex_add_point","path":"scripts/vertex_add_point/vertex_add_point.yy",},"order":0,},
+    {"id":{"name":"o_element","path":"objects/o_element/o_element.yy",},"order":2,},
+    {"id":{"name":"s_grid","path":"sprites/s_grid/s_grid.yy",},"order":0,},
+    {"id":{"name":"o_userControl","path":"objects/o_userControl/o_userControl.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
