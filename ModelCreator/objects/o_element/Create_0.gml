@@ -5,6 +5,8 @@ z = 0;
 model = -1;
 texture = -1;
 
+vlist = -1;
+
 // Transform options
 xsize = 1;
 ysize = 1;
