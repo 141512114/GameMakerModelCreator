@@ -20,9 +20,9 @@ if (instance_exists(o_userControl)) {
 	}
 
 	// Init the point where the user is looking at (with a distance)
-	var view_xto = xfrom + (dcos(follow_obj.look_dir) * dcos(follow_obj.look_pitch)) * raycast_dist;
-	var view_yto = yfrom - (dsin(follow_obj.look_dir) * dcos(follow_obj.look_pitch)) * raycast_dist;
-	var view_zto = zfrom - dsin(follow_obj.look_pitch) * raycast_dist;
+	view_xto = xfrom + (dcos(follow_obj.look_dir) * dcos(follow_obj.look_pitch)) * raycast_dist;
+	view_yto = yfrom - (dsin(follow_obj.look_dir) * dcos(follow_obj.look_pitch)) * raycast_dist;
+	view_zto = zfrom - dsin(follow_obj.look_pitch) * raycast_dist;
 	
 	var face_width = room_width, face_height = room_height;
 	

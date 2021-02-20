@@ -15,6 +15,7 @@
     {"id":{"name":"o_softwareManager","path":"objects/o_softwareManager/o_softwareManager.yy",},"order":1,},
     {"id":{"name":"c_init","path":"scripts/c_init/c_init.yy",},"order":7,},
     {"id":{"name":"load_obj","path":"scripts/load_obj/load_obj.yy",},"order":1,},
+    {"id":{"name":"draw_line_3d","path":"scripts/draw_line_3d/draw_line_3d.yy",},"order":5,},
     {"id":{"name":"c_shape_exists","path":"scripts/c_shape_exists/c_shape_exists.yy",},"order":11,},
     {"id":{"name":"c_hit_object","path":"scripts/c_hit_object/c_hit_object.yy",},"order":4,},
     {"id":{"name":"c_overlap_object","path":"scripts/c_overlap_object/c_overlap_object.yy",},"order":0,},

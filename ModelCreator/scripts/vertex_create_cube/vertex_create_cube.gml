@@ -1,4 +1,4 @@
-/// @function vertex_add_point(vertex_list, x, y, z, size, color, alpha);
+/// @function vertex_create_cube(vertex_list, x, y, z, size, color, alpha);
 
 /// @param vlist
 /// @param xx

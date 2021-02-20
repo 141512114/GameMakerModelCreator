@@ -1,9 +1,6 @@
 gpu_set_ztestenable(true);
 gpu_set_zwriteenable(true);
 
-c_init()
-c_world_create();
-
 // Vertex format
 vertex_format_begin();
 vertex_format_add_position_3d();
@@ -11,27 +8,6 @@ vertex_format_add_normal();
 vertex_format_add_texcoord();
 vertex_format_add_color();
 vformat = vertex_format_end();
-
-vbuffer = vertex_create_buffer();
-vertex_begin(vbuffer, vformat);
-
-// Create floor
-var size = 128, zz = 0;
-for (var i = 0; i < room_width; i += size) {
-	for (var j = 0; j < room_height; j += size) {
-		var color = c_white;
-		
-		vertex_add_point(vbuffer, -1, i, j, zz, 0, 0, 1, 0, 0, color, 1);
-		vertex_add_point(vbuffer, -1, i+size, j, zz, 0, 0, 1, 1, 0, color, 1);
-		vertex_add_point(vbuffer, -1, i+size, j+size, zz, 0, 0, 1, 1, 1, color, 1);
-
-		vertex_add_point(vbuffer, -1, i+size, j+size, zz, 0, 0, 1, 1, 1, color, 1);
-		vertex_add_point(vbuffer, -1, i, j+size, zz, 0, 0, 1, 0, 1, color, 1);
-		vertex_add_point(vbuffer, -1, i, j, zz, 0, 0, 1, 0, 0, color, 1);
-	}
-}
-
-vertex_end(vbuffer);
 
 // Instantiate objects
 var xppos = room_width / 2, yppos = room_height / 2;
@@ -74,11 +50,6 @@ if (el_obj.vlist != -1) {
 			var vpoint_obj = instance_create_depth(xx, yy, 0, o_vertex_point);
 			vpoint_obj.z = zz;
 			vpoint_obj.model = vertex_create_cube(-1, 0, 0, 0, vcube_size, c_orange, 1);
-			
-			var c_shape_vpoint = c_shape_create();
-			c_shape_add_box(c_shape_vpoint, vcube_size/2, vcube_size/2, vcube_size/2);
-			
-			c_world_add_object(c_object_create(c_shape_vpoint, -1, 1));
 			
 			// Add the new vertex position to the list
 			ds_list_add(v_pos_list, [xx, yy, zz]);

@@ -13,4 +13,5 @@ if (model != -1) {
 
 	vertex_delete_buffer(model);
 	model = vertex_create_buffer_from_buffer(model_buffer, o_softwareManager.vformat);
+	buffer_delete(model_buffer);
 }
