@@ -1,0 +1,1 @@
+if (grid_vertex_buffer != -1) then vertex_delete_buffer(grid_vertex_buffer);

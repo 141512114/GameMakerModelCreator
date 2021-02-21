@@ -22,3 +22,6 @@ prev_z_from = 0;
 prev_view_xto = 0;
 prev_view_yto = 0;
 prev_view_zto = 0;
+
+// Important for grid
+grid_vertex_buffer = create_grid(0, 0, 0, 64, room_width, room_height, c_white, 1);
