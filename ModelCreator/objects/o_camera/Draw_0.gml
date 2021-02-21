@@ -19,7 +19,9 @@ if (mouse_check_button_pressed(mb_middle)) {
 	prev_view_zto = view_zto;
 }
 
-vertex_submit(draw_line_3d(prev_x_from, prev_y_from, prev_z_from, prev_view_xto, prev_view_yto, prev_view_zto, c_red, 1), pr_linelist, -1);
+var view_line = draw_line_3d(prev_x_from, prev_y_from, prev_z_from, prev_view_xto, prev_view_yto, prev_view_zto, c_red, 1);
+vertex_submit(view_line, pr_linelist, -1);
+vertex_delete_buffer(view_line);
 
 // Draw grid
 var grid_color = c_white;
@@ -27,10 +29,16 @@ var grid_cell_size = 64;
 var grid_amount_lines = room_width / grid_cell_size;
 
 for (var i = 0; i <= grid_amount_lines; i++) {
+	var grid_v_line = draw_line_3d(0, 0 + (grid_cell_size * i), 0, room_width, 0 + (grid_cell_size * i), 0, grid_color, 1);
+	var grid_h_line = draw_line_3d(0 + (grid_cell_size * i), 0, 0, 0 + (grid_cell_size * i), room_height, 0, grid_color, 1);
+	
 	// Horizontal line
-	vertex_submit(draw_line_3d(0, 0 + (grid_cell_size * i), 0, room_width, 0 + (grid_cell_size * i), 0, grid_color, 1), pr_linelist, -1);
+	vertex_submit(grid_v_line, pr_linelist, -1);
 	// Vertical line
-	vertex_submit(draw_line_3d(0 + (grid_cell_size * i), 0, 0, 0 + (grid_cell_size * i), room_height, 0, grid_color, 1), pr_linelist, -1);
+	vertex_submit(grid_h_line, pr_linelist, -1);
+	
+	vertex_delete_buffer(grid_v_line);
+	vertex_delete_buffer(grid_h_line);
 }
 
 // Draw every 3d object in the scene / room
