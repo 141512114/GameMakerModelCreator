@@ -6,6 +6,7 @@ vlist = -1;
 
 model = -1;
 texture = -1;
+triangle_faces = [];
 
 // Transform options
 xsize = 1;

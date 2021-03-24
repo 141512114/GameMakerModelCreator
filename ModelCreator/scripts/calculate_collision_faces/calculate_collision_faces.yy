@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "load_models",
-    "path": "folders/Scripts/load_models.yy",
+    "name": "collision_stuff",
+    "path": "folders/Scripts/collision_stuff.yy",
   },
   "resourceVersion": "1.0",
-  "name": "load_obj",
+  "name": "calculate_collision_faces",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "load_models",
-    "path": "folders/Scripts/load_models.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "load_obj",
+  "name": "raycast_hit",
   "tags": [],
   "resourceType": "GMScript",
 }

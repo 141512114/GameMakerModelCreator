@@ -8,17 +8,7 @@ camera_set_view_mat(camera, matrix_build_lookat(xfrom, yfrom, zfrom, xto, yto, z
 camera_set_proj_mat(camera, matrix_build_projection_perspective_fov(-60, window_get_width() / window_get_height(), 1, 32000));
 camera_apply(camera);
 
-// Draw raycast
-if (mouse_check_button_pressed(mb_middle)) {
-	prev_x_from = xfrom;
-	prev_y_from = yfrom;
-	prev_z_from = zfrom;
-	
-	prev_view_xto = view_xto;
-	prev_view_yto = view_yto;
-	prev_view_zto = view_zto;
-}
-
+// Draw raycast (view line of the user)
 var view_line = draw_line_3d(prev_x_from, prev_y_from, prev_z_from, prev_view_xto, prev_view_yto, prev_view_zto, c_red, 1);
 vertex_submit(view_line, pr_linelist, -1);
 vertex_delete_buffer(view_line);

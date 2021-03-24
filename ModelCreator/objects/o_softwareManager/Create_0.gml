@@ -14,6 +14,7 @@ var xppos = room_width / 2, yppos = room_height / 2;
 instance_create_depth(xppos, yppos, 0, o_camera);
 instance_create_depth(xppos, yppos, 0, o_userControl);
 
+// Create default cube
 var cube_size = 96;
 var cube_x = xppos - cube_size/2, cube_y = yppos - cube_size/2, cube_z = 25;
 var el_obj = instance_create_depth(cube_x, cube_y, 0, o_element);
@@ -21,6 +22,11 @@ el_obj.vlist = ds_list_create();
 el_obj.model = vertex_create_cube(el_obj.vlist, 0, 0, 0, cube_size, c_gray, 1);
 el_obj.z = cube_z;
 
+// Yeah, calculate the collision faces which we then can use for raycasting and stuff
+el_obj.triangle_faces = calculate_collision_faces(el_obj);
+show_debug_message(el_obj.triangle_faces);
+
+// With it's editable vertex points
 if (el_obj.vlist != -1) {
 	var vlen = ds_list_size(el_obj.vlist), vcube_size = 10, v_pos_list = ds_list_create();
 	for (var i = 0; i < vlen; i++) {
