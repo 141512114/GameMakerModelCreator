@@ -24,6 +24,4 @@ if (instance_exists(o_userControl)) {
 		prev_view_yto = view_yto;
 		prev_view_zto = view_zto;
 	}
-	
-	raycast_hit(o_element, xfrom, yfrom, zfrom, xto, yto, zto);
 }

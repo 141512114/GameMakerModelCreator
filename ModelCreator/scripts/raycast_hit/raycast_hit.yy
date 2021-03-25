@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "collision_stuff",
+    "path": "folders/Scripts/collision_stuff.yy",
   },
   "resourceVersion": "1.0",
   "name": "raycast_hit",

@@ -16,6 +16,8 @@ vertex_delete_buffer(view_line);
 // Draw grid
 vertex_submit(grid_vertex_buffer, pr_linelist, -1);
 
+if (raycast_hit(o_element, xfrom, yfrom, zfrom, xto, yto, zto)) then show_debug_message("Collision?");
+
 // Draw every 3d object in the scene / room
 // Enable lighting
 shader_set(shd_lighting);

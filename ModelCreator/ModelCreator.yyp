@@ -26,7 +26,7 @@
     {"id":{"name":"c_object_set_userid","path":"scripts/c_object_set_userid/c_object_set_userid.yy",},"order":7,},
     {"id":{"name":"c_transform_position","path":"scripts/c_transform_position/c_transform_position.yy",},"order":2,},
     {"id":{"name":"c_world_remove_object","path":"scripts/c_world_remove_object/c_world_remove_object.yy",},"order":6,},
-    {"id":{"name":"raycast_hit","path":"scripts/raycast_hit/raycast_hit.yy",},"order":4,},
+    {"id":{"name":"raycast_hit","path":"scripts/raycast_hit/raycast_hit.yy",},"order":1,},
     {"id":{"name":"c_transform_matrix","path":"scripts/c_transform_matrix/c_transform_matrix.yy",},"order":1,},
     {"id":{"name":"c_world_exists","path":"scripts/c_world_exists/c_world_exists.yy",},"order":4,},
     {"id":{"name":"c_world_get_count","path":"scripts/c_world_get_count/c_world_get_count.yy",},"order":5,},
