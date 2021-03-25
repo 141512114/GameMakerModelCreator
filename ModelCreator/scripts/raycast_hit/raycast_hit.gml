@@ -12,6 +12,8 @@ function raycast_hit(object, x1, y1, z1, x2, y2, z2){
 	// Calculate direction vector (basically where we're looking)
 	var dx = x2 - x1, dy = y2 - y1, dz = z2 - z1;
 	
+	show_debug_message("Richtungsvektor (Raycast): " + string(dx) + ", " + string(dy) + ", " + string(dz));
+	
 	// Loop through each instance with the same class type
 	for (var inst_num = 0; inst_num < instance_number(object); inst_num++) {
 		var current_inst = instance_find(object, inst_num);
@@ -43,9 +45,10 @@ function raycast_hit(object, x1, y1, z1, x2, y2, z2){
 			var e_sx = triangle_eq[0] * sx, e_sy = triangle_eq[1] * sy, e_sz = triangle_eq[2] * sz;
 			var sum_e_s_xyz = e_sx + e_sy + e_sz + triangle_eq[3];
 			
-			show_debug_message(string(sum_e_s_xyz) + " = 0");
+			show_debug_message(string(triangle_eq[0]) + " * " + string(sx) + " + " + string(triangle_eq[1]) + " * " + string(sy) + " + " + string(triangle_eq[2]) + " * " + string(sz) + " + " + string(triangle_eq[3]) + " = 0");
+			show_debug_message(sum_e_s_xyz);
 		
-			if (sum_e_s_xyz == 0) then return true; else return false;
+			if (sum_e_s_xyz == 0) then show_debug_message("Collision?");
 		}
 	}
 }

@@ -5,7 +5,7 @@ look_pitch = clamp(look_pitch, -89, 89);
 
 // Lock cursor to the center of the window
 window_mouse_set(window_get_width() / 2, window_get_height() / 2);
-if (keyboard_check_direct(vk_escape)) then game_end(); // Emergency exit
+if (keyboard_check_direct(vk_escape)) then game_end();
 
 // Movement
 var dx = 0, dy = 0, len = 0;

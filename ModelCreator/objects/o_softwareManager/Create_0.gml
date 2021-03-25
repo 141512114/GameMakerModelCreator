@@ -14,6 +14,7 @@ var xppos = room_width / 2, yppos = room_height / 2;
 instance_create_depth(xppos, yppos, 0, o_camera);
 instance_create_depth(xppos, yppos, 0, o_userControl);
 
+
 // Create default cube
 var cube_size = 96;
 var cube_x = xppos - cube_size/2, cube_y = yppos - cube_size/2, cube_z = 25;
