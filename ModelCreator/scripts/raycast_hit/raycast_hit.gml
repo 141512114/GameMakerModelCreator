@@ -48,7 +48,7 @@ function raycast_hit(object, x1, y1, z1, x2, y2, z2){
 			show_debug_message(string(triangle_eq[0]) + " * " + string(sx) + " + " + string(triangle_eq[1]) + " * " + string(sy) + " + " + string(triangle_eq[2]) + " * " + string(sz) + " + " + string(triangle_eq[3]) + " = 0");
 			show_debug_message(sum_e_s_xyz);
 		
-			if (sum_e_s_xyz == 0) then show_debug_message("Collision?");
+			if (sum_e_s_xyz == 0) then show_debug_message("Collision with " + string(i) + "?");
 		}
 	}
 }
