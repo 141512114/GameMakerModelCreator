@@ -25,5 +25,5 @@ if (instance_exists(o_userControl)) {
 		prev_view_zto = view_zto;
 	}
 	
-	raycast_hit(o_element, xfrom, yfrom, zfrom, xto, yto, zto);
+	if (raycast_hit(o_element, xfrom, yfrom, zfrom, xto, yto, zto)) then show_debug_message("Yes " + string(current_time));
 }

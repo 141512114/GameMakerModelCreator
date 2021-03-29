@@ -42,7 +42,7 @@ function calculate_collision_faces(object) {
 		var y_off = -(cpx * x1) - (cpy * y1) - (cpz * z1);
 			
 		// Save the calculated equation in an array
-		triangle_faces_buffer[i/108] = [cpx, cpy, cpz, y_off];
+		triangle_faces_buffer[i/108] = [ [cpx, cpy, cpz, y_off], [x1, y1, z1], [sx1, sy1, sz1], [sx2, sy2, sz2] ];
 			
 		show_debug_message("Ebenengleichung: " + string(cpx) + "x" + string(cpy) + "y" + string(cpz) + "z " + string(y_off) + " = 0");
 	}
